@@ -1,10 +1,7 @@
 package com.badaev.realestate.property.entity;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
@@ -58,5 +55,13 @@ public class Property {
     @PreUpdate
     void afterInsert() {
         OffsetDateTime now = OffsetDateTime.now(ZoneOffset.UTC);
+    }
+
+    public Property(String title, String description, BigDecimal price, String city, String address) {
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.city = city;
+        this.address = address;
     }
 }

@@ -7,5 +7,4 @@ public record CreatePropertyRequest(String title,
                                     BigDecimal price,
                                     String city,
                                     String address) {
-
 }
